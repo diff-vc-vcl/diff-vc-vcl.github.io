@@ -1,0 +1,118 @@
+<html>
+    <!-- HEADER -->
+    <head>
+        <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+
+        <title>Demo page of "A unified system for voice cloning and voice conversion through diffusion probabilistic modeling (ICASSP 2022 review)"</title>
+        <link rel="icon" href="resources/img/icon.png">
+
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/text.css">
+        <link rel="stylesheet" href="css/media.css">
+        <link rel="stylesheet" href="css/select.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100&display=swap" rel="stylesheet">
+    </head>
+
+    <!-- MAIN BODY -->
+    <body>
+        <div class="main">
+            <!-- HEADER -->
+            <br>
+            <h1 class="wrapper">A unified system for voice cloning and voice conversion through diffusion probabilistic modeling (ICLR 2022 review)</h1>
+            <p class="wrapper">Under review as a conference paper at ICASSP 2022, <a href="">pdf</a></p>
+
+            <!-- ABSTRACT -->
+            <br><br>
+            <h2 class="wrapper">Abstract</h2>
+            <p class="wrapper">Text-to-speech and voice conversion are two common speech generation tasks typically solved using different models. In this paper, we present a novel approach to voice cloning and any-to-any voice conversion relying on a single diffusion probabilistic model with two encoders each operating on its input domain and a shared decoder. We show that the proposed model can copy a target speaker's voice both by means of speaker encoding and speaker adaptation. The results of extensive human evaluation allow us to conclude that the quality of the speech synthesized by our multimodal system in both voice cloning and voice conversion models is comparable with that of recently proposed algorithms for the corresponding single tasks. Besides, our system performs speaker adaptation with as few as 150 SGD steps and requires only 15 seconds of noisy non-transcribed audio which makes it attractive for practical applications.</p>
+
+            <!-- 2 MOS AUDIO SAMPLES -->
+            <br><br>
+            <h2 class="wrapper">1 Voice Conversion</h2>
+            <p class="wrapper">In this section we provide a subset of audio samples used in Mean Opinion Score evaluation. We compare baselines with our diffusion-based models trained on LibriTTS datasets.</p>
+            <div class="wrapper" style="text-align: center;">
+                <span class="choose">Choose a pair of voices:</span>
+                
+                    <div class="dropdown">
+                    <div class="select">
+                        <span>Select pair</span>
+                        <i class="fa fa-chevron-left"></i>
+                    </div>
+                    <input type="hidden" name="gender">
+                    <ul class="dropdown-menu">
+                        <li id="p362-p229">p362-p229</li>
+                        <li id="1401-8057">1401-8057</li>
+                        <li id="1401-john">1401-john</li>
+                        <li id="2238-3723">2238-3723</li>
+                        <li id="4014-587">4014-587</li>
+                        <li id="6415-paul">6415-paul</li>
+                        <li id="8057-6415">8057-6415</li>
+                        <li id="john-larry">john-larry</li>
+                        <li id="p238-p261">p238-p261</li>
+                        <li id="p241-p238">p241-p238</li>
+                        <li id="p252-p243">p252-p243</li>
+                        <li id="paul-donald">paul-donald</li>
+                    </ul>
+                    </div>
+            </div>
+            <script language="JavaScript" type="text/javascript" src="js/select.js"></script>
+
+            <div class="vcpair">
+                <table class="wrapper">
+                    <tbody style="margin-right: auto; text-align: center;">
+                        <tr>
+                            <td></td>
+                            <td><b>Source</b></td>
+                            <td><b>Target</b></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><audio controls=""><source src=""></audio></td>
+                            <td><audio controls=""><source src=""></audio></td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <td><br></td>
+                        </tr>
+
+                        <tr>
+                            <td></td>
+                            <td><a href="https://github.com/Wendison/VQMIVC">VQMIVC</a></td>
+                            <td><a href="https://github.com/liusongxiang/ppg-vc">BNE-PPG-VC</a></td>
+                            <td>Ours</td>
+                        </tr>
+                        <tr>
+                            <td style="font-size: medium; text-align: right;"><i style="font-weight: 700;">ZSL</i>:</td>
+                            <td><audio controls=""><source src=""></audio></td>
+                            <td><audio controls=""><source src=""></audio></td>
+                            <td><audio controls=""><source src=""></audio></td>
+                        </tr>
+                        <tr>
+                            <td><br></td>
+                        </tr>
+                        <tr>
+                            <td style="font-size: medium; text-align: right;"><i style="font-weight: 700;">FSL</i>:</td>
+                            <td><audio controls=""><source src=""></audio></td>
+                            <td><audio controls=""><source src=""></audio></td>
+                            <td><audio controls=""><source src=""></audio></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><br></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <br><br><br>
+            <p class="wrapper" style="text-align: center; font-weight: 300;">September 2021</p>
+            <br><br><br>
+        </div>
+        
+    </body>
+</html>
