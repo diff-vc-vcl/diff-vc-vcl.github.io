@@ -1,118 +1,381 @@
 <html>
+<!-- HEADER -->
+<head>
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+
+    <title>Demo page of "A unified system for voice cloning and voice conversion through diffusion probabilistic
+        modeling (ICASSP 2022 review)"</title>
+    <link rel="icon" href="resources/img/icon.png">
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/text.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="css/select.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100&display=swap"
+          rel="stylesheet">
+</head>
+
+<!-- MAIN BODY -->
+<body>
+<div class="main">
     <!-- HEADER -->
-    <head>
-        <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+    <br>
+    <h1 class="wrapper">A unified system for voice cloning and voice conversion through diffusion probabilistic modeling
+        (ICASSP 2022 review)</h1>
+    <p class="wrapper">Under review as a conference paper at ICASSP 2022, <a href="">pdf</a></p>
 
-        <title>Demo page of "A unified system for voice cloning and voice conversion through diffusion probabilistic modeling (ICASSP 2022 review)"</title>
-        <link rel="icon" href="resources/img/icon.png">
+    <!-- ABSTRACT -->
+    <br><br>
+    <h2 class="wrapper">Abstract</h2>
+    <p class="wrapper">Text-to-speech and voice conversion are two common speech generation tasks typically solved using
+        different models. In this paper, we present a novel approach to voice cloning and any-to-any voice conversion
+        relying on a single diffusion probabilistic model with two encoders each operating on its input domain and a
+        shared decoder. We show that the proposed model can copy a target speaker's voice both by means of speaker
+        encoding and speaker adaptation. The results of extensive human evaluation allow us to conclude that the quality
+        of the speech synthesized by our multimodal system in both voice cloning and voice conversion modes is
+        comparable with that of recently proposed algorithms for the corresponding single tasks. Besides, it takes as
+        few as 3 minutes of GPU time to adapt our model to a new speaker with only 15 seconds of untranscribed audio
+        which makes it attractive for practical applications.</p>
 
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/text.css">
-        <link rel="stylesheet" href="css/media.css">
-        <link rel="stylesheet" href="css/select.css">
+    <!-- 2 MOS AUDIO SAMPLES -->
+    <br><br>
+    <h2 class="wrapper">1 Voice Conversion</h2>
+    <p class="wrapper">In this section we provide a subset of audio samples used in Mean Opinion Score evaluation for
+        voice conversion task. We compare baselines with our unified diffusion-based model in zero-shot (ZSL) and
+        few-shot (FSL) scenarios for speakers unseen during training.</p>
+    <div class="wrapper" style="text-align: center;">
+        <span class="choose">Choose a pair of voices:</span>
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100&display=swap" rel="stylesheet">
-    </head>
-
-    <!-- MAIN BODY -->
-    <body>
-        <div class="main">
-            <!-- HEADER -->
-            <br>
-            <h1 class="wrapper">A unified system for voice cloning and voice conversion through diffusion probabilistic modeling (ICLR 2022 review)</h1>
-            <p class="wrapper">Under review as a conference paper at ICASSP 2022, <a href="">pdf</a></p>
-
-            <!-- ABSTRACT -->
-            <br><br>
-            <h2 class="wrapper">Abstract</h2>
-            <p class="wrapper">Text-to-speech and voice conversion are two common speech generation tasks typically solved using different models. In this paper, we present a novel approach to voice cloning and any-to-any voice conversion relying on a single diffusion probabilistic model with two encoders each operating on its input domain and a shared decoder. We show that the proposed model can copy a target speaker's voice both by means of speaker encoding and speaker adaptation. The results of extensive human evaluation allow us to conclude that the quality of the speech synthesized by our multimodal system in both voice cloning and voice conversion models is comparable with that of recently proposed algorithms for the corresponding single tasks. Besides, our system performs speaker adaptation with as few as 150 SGD steps and requires only 15 seconds of noisy non-transcribed audio which makes it attractive for practical applications.</p>
-
-            <!-- 2 MOS AUDIO SAMPLES -->
-            <br><br>
-            <h2 class="wrapper">1 Voice Conversion</h2>
-            <p class="wrapper">In this section we provide a subset of audio samples used in Mean Opinion Score evaluation. We compare baselines with our diffusion-based models trained on LibriTTS datasets.</p>
-            <div class="wrapper" style="text-align: center;">
-                <span class="choose">Choose a pair of voices:</span>
-                
-                    <div class="dropdown">
-                    <div class="select">
-                        <span>Select pair</span>
-                        <i class="fa fa-chevron-left"></i>
-                    </div>
-                    <input type="hidden" name="gender">
-                    <ul class="dropdown-menu">
-                        <li id="p362-p229">p362-p229</li>
-                        <li id="1401-8057">1401-8057</li>
-                        <li id="1401-john">1401-john</li>
-                        <li id="2238-3723">2238-3723</li>
-                        <li id="4014-587">4014-587</li>
-                        <li id="6415-paul">6415-paul</li>
-                        <li id="8057-6415">8057-6415</li>
-                        <li id="john-larry">john-larry</li>
-                        <li id="p238-p261">p238-p261</li>
-                        <li id="p241-p238">p241-p238</li>
-                        <li id="p252-p243">p252-p243</li>
-                        <li id="paul-donald">paul-donald</li>
-                    </ul>
-                    </div>
+        <div class="dropdown">
+            <div class="select">
+                <span>Select pair</span>
+                <i class="fa fa-chevron-left"></i>
             </div>
-            <script language="JavaScript" type="text/javascript" src="js/select.js"></script>
-
-            <div class="vcpair">
-                <table class="wrapper">
-                    <tbody style="margin-right: auto; text-align: center;">
-                        <tr>
-                            <td></td>
-                            <td><b>Source</b></td>
-                            <td><b>Target</b></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td><audio controls=""><source src=""></audio></td>
-                            <td><audio controls=""><source src=""></audio></td>
-                            <td></td>
-                        </tr>
-
-                        <tr>
-                            <td><br></td>
-                        </tr>
-
-                        <tr>
-                            <td></td>
-                            <td><a href="https://github.com/Wendison/VQMIVC">VQMIVC</a></td>
-                            <td><a href="https://github.com/liusongxiang/ppg-vc">BNE-PPG-VC</a></td>
-                            <td>Ours</td>
-                        </tr>
-                        <tr>
-                            <td style="font-size: medium; text-align: right;"><i style="font-weight: 700;">ZSL</i>:</td>
-                            <td><audio controls=""><source src=""></audio></td>
-                            <td><audio controls=""><source src=""></audio></td>
-                            <td><audio controls=""><source src=""></audio></td>
-                        </tr>
-                        <tr>
-                            <td><br></td>
-                        </tr>
-                        <tr>
-                            <td style="font-size: medium; text-align: right;"><i style="font-weight: 700;">FSL</i>:</td>
-                            <td><audio controls=""><source src=""></audio></td>
-                            <td><audio controls=""><source src=""></audio></td>
-                            <td><audio controls=""><source src=""></audio></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td><br></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <br><br><br>
-            <p class="wrapper" style="text-align: center; font-weight: 300;">September 2021</p>
-            <br><br><br>
+            <input type="hidden" name="gender">
+            <ul class="dropdown-menu conversion">
+                <li id="p228-p225">p228-p225</li>
+                <!-- <li id="p240-p302">p240-p302</li> -->
+                <li id="p243-p241">p243-p241</li>
+                <li id="p244-p261">p244-p261</li>
+                <li id="p247-p347">p247-p347</li>
+                <li id="p250-p254">p250-p254</li>
+                <li id="p250-p272">p250-p272</li>
+                <li id="p253-p238">p253-p238</li>
+                <li id="p361-p280">p361-p280</li>
+                <li id="p362-p229">p362-p229</li>
+                <li id="p363-p345">p363-p345</li>
+                <li id="p363-p362">p363-p362</li>
+            </ul>
         </div>
-        
-    </body>
+    </div>
+
+    <div class="vcpair">
+        <table class="wrapper">
+            <tbody style="margin-right: auto; text-align: center;">
+            <tr>
+                <td></td>
+                <td><b>Source</b></td>
+                <td><b>Target</b></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <audio controls="">
+                        <source src="">
+                    </audio>
+                </td>
+                <td>
+                    <audio controls="">
+                        <source src="">
+                    </audio>
+                </td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td><br></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td><a href="https://github.com/Wendison/VQMIVC">VQMIVC</a></td>
+                <td><a href="https://github.com/liusongxiang/ppg-vc">BNE-PPG-VC</a></td>
+                <td>Ours</td>
+            </tr>
+            <tr>
+                <td style="font-size: medium; text-align: right;"><i style="font-weight: 700;">ZSL</i>:</td>
+                <td>
+                    <audio controls="">
+                        <source src="">
+                    </audio>
+                </td>
+                <td>
+                    <audio controls="">
+                        <source src="">
+                    </audio>
+                </td>
+                <td>
+                    <audio controls="">
+                        <source src="">
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td><br></td>
+            </tr>
+            <tr>
+                <td style="font-size: medium; text-align: right;"><i style="font-weight: 700;">FSL</i>:</td>
+                <td>
+                    <audio controls="">
+                        <source src="">
+                    </audio>
+                </td>
+                <td>
+                    <audio controls="">
+                        <source src="">
+                    </audio>
+                </td>
+                <td>
+                    <audio controls="">
+                        <source src="">
+                    </audio>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><br></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <br><br>
+    <h2 class="wrapper">2 Voice Cloning</h2>
+    <p class="wrapper">In this section we provide a subset of audio samples used in Mean Opinion Score evaluation for
+        voice cloning task.</p>
+    <div class="wrapper" style="text-align: center;">
+        <span class="choose">Choose a speaker:</span>
+
+        <div class="dropdown">
+            <div class="select">
+                <span>Select speaker</span>
+                <i class="fa fa-chevron-left"></i>
+            </div>
+            <input type="hidden" name="gender">
+            <ul class="dropdown-menu cloning">
+                <li id="p231">p231</li>
+                <li id="p237">p237</li>
+                <li id="p243">p243</li>
+                <li id="p246">p246</li>
+                <li id="p250">p250</li>
+                <li id="p272">p272</li>
+                <li id="p294">p294</li>
+                <li id="p302">p302</li>
+                <li id="p334">p334</li>
+                <li id="p343">p343</li>
+            </ul>
+        </div>
+    </div>
+    <div class="wrapper_cloning">
+        <table class="wrapper smaller_audio">
+            <tbody style="margin-right: auto; text-align: center;">
+            <tr>
+                <td></td>
+                <td><b>p231</b></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <audio controls="" src="resources/audio/cloning/p231/target.wav">
+                        <source src="">
+                    </audio>
+                </td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td><br></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td colspan="8" class="table_text"><b> Text: </b>When a man looks for something beyond his reach, his
+                    friends say he is looking for the pot of gold of the end of the rainbow.
+                </td>
+            </tr>
+            <tr>
+                <td><br></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><a href="https://github.com/KevinMIN95/StyleSpeech">StyleSpeech</a></td>
+                <td>FastSpeech</a></td>
+                <td>Tacotron-SMA</td>
+                <td>Grad-TTS</td>
+                <td>Ours</td>
+
+            </tr>
+            <tr>
+                <td style="font-size: medium; text-align: right;"><i style="font-weight: 700;">ZSL</i>:</td>
+                <td>
+                    <audio controls="">
+                        <source src="resources/audio/cloning/p231/stylespeech_zsl.wav">
+                    </audio>
+                </td>
+                <td>
+                    <audio controls="">
+                        <source src="resources/audio/cloning/p231/fs_zsl.wav">
+                    </audio>
+                </td>
+                <td>
+                    <audio controls="">
+                        <source src="resources/audio/cloning/p231/sma_zsl.wav">
+                    </audio>
+                </td>
+                <td>
+                    <audio controls="">
+                        <source src="resources/audio/cloning/p231/gradtts_zsl.wav">
+                    </audio>
+                </td>
+                <td>
+                    <audio controls="">
+                        <source src="resources/audio/cloning/p231/diffvc_zsl.wav">
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td><br></td>
+            </tr>
+            <tr>
+                <td style="font-size: medium; text-align: right;"><i style="font-weight: 700;">FSL</i>:</td>
+                <td>
+                    <audio controls="">
+                        <source src="resources/audio/cloning/p231/stylespeech_fsl.wav">
+                    </audio>
+                </td>
+                <td>
+                    <audio controls="">
+                        <source src="resources/audio/cloning/p231/fs_fsl.wav">
+                    </audio>
+                </td>
+                <td>
+                    <audio controls="">
+                        <source src="resources/audio/cloning/p231/sma_fsl.wav">
+                    </audio>
+                </td>
+                <td>
+                    <audio controls="">
+                        <source src="resources/audio/cloning/p231/gradtts_fsl.wav">
+                    </audio>
+                </td>
+                <td>
+                    <audio controls="">
+                        <source src="resources/audio/cloning/p231/diffvc_fsl.wav">
+                    </audio>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><br></td>
+            </tr>
+            <tr>
+                <td><br></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class="table_text" colspan="8"><b> Text: </b>Throughout the centuries people have explained the
+                    rainbow in various ways.
+                </td>
+            </tr>
+            <tr>
+                <td><br></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><a href="https://github.com/KevinMIN95/StyleSpeech">StyleSpeech</a></td>
+                <td>FastSpeech</a></td>
+                <td>Tacitron-SMA</td>
+                <td>Grad-TTS</td>
+                <td>Ours</td>
+
+            </tr>
+            <tr>
+                <td style="font-size: medium; text-align: right;"><i style="font-weight: 700;">ZSL</i>:</td>
+                <td>
+                    <audio controls="">
+                        <source src="resources/audio/cloning/p231_4/stylespeech_zsl.wav">
+                    </audio>
+                </td>
+                <td>
+                    <audio controls="">
+                        <source src="resources/audio/cloning/p231_4/fs_zsl.wav">
+                    </audio>
+                </td>
+                <td>
+                    <audio controls="">
+                        <source src="resources/audio/cloning/p231_4/sma_zsl.wav">
+                    </audio>
+                </td>
+                <td>
+                    <audio controls="">
+                        <source src="resources/audio/cloning/p231_4/gradtts_zsl.wav">
+                    </audio>
+                </td>
+                <td>
+                    <audio controls="">
+                        <source src="resources/audio/cloning/p231_4/diffvc_zsl.wav">
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td><br></td>
+            </tr>
+            <tr>
+                <td style="font-size: medium; text-align: right;"><i style="font-weight: 700;">FSL</i>:</td>
+                <td>
+                    <audio controls="">
+                        <source src="resources/audio/cloning/p231_4/stylespeech_fsl.wav">
+                    </audio>
+                </td>
+                <td>
+                    <audio controls="">
+                        <source src="resources/audio/cloning/p231_4/fs_fsl.wav">
+                    </audio>
+                </td>
+                <td>
+                    <audio controls="">
+                        <source src="resources/audio/cloning/p231_4/sma_fsl.wav">
+                    </audio>
+                </td>
+                <td>
+                    <audio controls="">
+                        <source src="resources/audio/cloning/p231_4/gradtts_fsl.wav">
+                    </audio>
+                </td>
+                <td>
+                    <audio controls="">
+                        <source src="resources/audio/cloning/p231_4/diffvc_fsl.wav">
+                    </audio>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><br></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script language="JavaScript" type="text/javascript" src="js/select.js"></script>
+    <br><br><br>
+    <p class="wrapper" style="text-align: center; font-weight: 300;">October 2021</p>
+    <br><br><br>
+</div>
+
+</body>
 </html>

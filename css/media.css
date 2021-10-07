@@ -5,6 +5,9 @@ audio {
     display: flex;
 }
 
+.smaller_audio audio {
+    width: 180px;
+}
 source {
     margin: auto;
     width: 80%;
