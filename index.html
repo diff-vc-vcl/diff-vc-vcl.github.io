@@ -45,7 +45,7 @@
     <h2 class="wrapper">1 Voice Conversion</h2>
     <p class="wrapper">In this section we provide a subset of audio samples used in Mean Opinion Score evaluation for
         voice conversion task. We compare baselines with our unified diffusion-based model in zero-shot (ZSL) and
-        few-shot (FSL) scenarios for speakers unseen during training.</p>
+        few-shot (FSL) scenarios for speakers from VCTK unseen during training. All models were train on LibriTTS dataset. </p>
     <div class="wrapper" style="text-align: center;">
         <span class="choose">Choose a pair of voices:</span>
 
@@ -85,12 +85,12 @@
                 <td></td>
                 <td>
                     <audio controls="">
-                        <source src="">
+                        <source src="resources/audio/conversion/p228-p225/source.wav">
                     </audio>
                 </td>
                 <td>
                     <audio controls="">
-                        <source src="">
+                        <source src="resources/audio/conversion/p228-p225/target.wav">
                     </audio>
                 </td>
                 <td></td>
@@ -110,17 +110,17 @@
                 <td style="font-size: medium; text-align: right;"><i style="font-weight: 700;">ZSL</i>:</td>
                 <td>
                     <audio controls="">
-                        <source src="">
+                        <source src="resources/audio/conversion/p228-p225/vqmivc_zsl.wav">
                     </audio>
                 </td>
                 <td>
                     <audio controls="">
-                        <source src="">
+                        <source src="resources/audio/conversion/p228-p225/ppgvc1_zsl.wav">
                     </audio>
                 </td>
                 <td>
                     <audio controls="">
-                        <source src="">
+                        <source src="resources/audio/conversion/p228-p225/diffvc_zsl.wav">
                     </audio>
                 </td>
             </tr>
@@ -131,17 +131,17 @@
                 <td style="font-size: medium; text-align: right;"><i style="font-weight: 700;">FSL</i>:</td>
                 <td>
                     <audio controls="">
-                        <source src="">
+                        <source src="resources/audio/conversion/p228-p225/ppgvc1_fsl.wav">
                     </audio>
                 </td>
                 <td>
                     <audio controls="">
-                        <source src="">
+                        <source src="resources/audio/conversion/p228-p225/ppgvc2_fsl.wav">
                     </audio>
                 </td>
                 <td>
                     <audio controls="">
-                        <source src="">
+                        <source src="resources/audio/conversion/p228-p225/diffvc_fsl.wav">
                     </audio>
                 </td>
                 <td></td>
@@ -153,11 +153,9 @@
         </table>
     </div>
 
-
-    <br><br>
     <h2 class="wrapper">2 Voice Cloning</h2>
     <p class="wrapper">In this section we provide a subset of audio samples used in Mean Opinion Score evaluation for
-        voice cloning task.</p>
+        voice cloning task on speakers from VCTK.</p>
     <div class="wrapper" style="text-align: center;">
         <span class="choose">Choose a speaker:</span>
 
@@ -223,29 +221,19 @@
             <tr>
                 <td style="font-size: medium; text-align: right;"><i style="font-weight: 700;">ZSL</i>:</td>
                 <td>
-                    <audio controls="">
-                        <source src="resources/audio/cloning/p231/stylespeech_zsl.wav">
-                    </audio>
+                    <audio controls=""><source src="resources/audio/cloning/p231/stylespeech_zsl.wav"></audio>
                 </td>
                 <td>
-                    <audio controls="">
-                        <source src="resources/audio/cloning/p231/fs_zsl.wav">
-                    </audio>
+                    <audio controls=""><source src="resources/audio/cloning/p231/fs_zsl.wav"></audio>
                 </td>
                 <td>
-                    <audio controls="">
-                        <source src="resources/audio/cloning/p231/sma_zsl.wav">
-                    </audio>
+                    <audio controls=""><source src="resources/audio/cloning/p231/sma_zsl.wav"></audio>
                 </td>
                 <td>
-                    <audio controls="">
-                        <source src="resources/audio/cloning/p231/gradtts_zsl.wav">
-                    </audio>
+                    <audio controls=""><source src="resources/audio/cloning/p231/gradtts_zsl.wav"></audio>
                 </td>
                 <td>
-                    <audio controls="">
-                        <source src="resources/audio/cloning/p231/diffvc_zsl.wav">
-                    </audio>
+                    <audio controls=""><source src="resources/audio/cloning/p231/diffvc_zsl.wav"></audio>
                 </td>
             </tr>
             <tr>
@@ -254,29 +242,19 @@
             <tr>
                 <td style="font-size: medium; text-align: right;"><i style="font-weight: 700;">FSL</i>:</td>
                 <td>
-                    <audio controls="">
-                        <source src="resources/audio/cloning/p231/stylespeech_fsl.wav">
-                    </audio>
+                    <audio controls=""><source src="resources/audio/cloning/p231/stylespeech_fsl.wav"></audio>
                 </td>
                 <td>
-                    <audio controls="">
-                        <source src="resources/audio/cloning/p231/fs_fsl.wav">
-                    </audio>
+                    <audio controls=""><source src="resources/audio/cloning/p231/fs_fsl.wav"></audio>
                 </td>
                 <td>
-                    <audio controls="">
-                        <source src="resources/audio/cloning/p231/sma_fsl.wav">
-                    </audio>
+                    <audio controls=""><source src="resources/audio/cloning/p231/sma_fsl.wav"></audio>
                 </td>
                 <td>
-                    <audio controls="">
-                        <source src="resources/audio/cloning/p231/gradtts_fsl.wav">
-                    </audio>
+                    <audio controls=""><source src="resources/audio/cloning/p231/gradtts_fsl.wav"></audio>
                 </td>
                 <td>
-                    <audio controls="">
-                        <source src="resources/audio/cloning/p231/diffvc_fsl.wav">
-                    </audio>
+                    <audio controls=""><source src="resources/audio/cloning/p231/diffvc_fsl.wav"></audio>
                 </td>
                 <td></td>
             </tr>
@@ -302,7 +280,6 @@
                 <td>Tacitron-SMA</td>
                 <td>Grad-TTS</td>
                 <td>Ours</td>
-
             </tr>
             <tr>
                 <td style="font-size: medium; text-align: right;"><i style="font-weight: 700;">ZSL</i>:</td>
@@ -338,30 +315,260 @@
             <tr>
                 <td style="font-size: medium; text-align: right;"><i style="font-weight: 700;">FSL</i>:</td>
                 <td>
-                    <audio controls="">
-                        <source src="resources/audio/cloning/p231_4/stylespeech_fsl.wav">
-                    </audio>
+                    <audio controls=""><source src="resources/audio/cloning/p231_4/stylespeech_fsl.wav"></audio>
                 </td>
                 <td>
-                    <audio controls="">
-                        <source src="resources/audio/cloning/p231_4/fs_fsl.wav">
-                    </audio>
+                    <audio controls=""><source src="resources/audio/cloning/p231_4/fs_fsl.wav"></audio>
                 </td>
                 <td>
-                    <audio controls="">
-                        <source src="resources/audio/cloning/p231_4/sma_fsl.wav">
-                    </audio>
+                    <audio controls=""><source src="resources/audio/cloning/p231_4/sma_fsl.wav"></audio>
                 </td>
                 <td>
-                    <audio controls="">
-                        <source src="resources/audio/cloning/p231_4/gradtts_fsl.wav">
-                    </audio>
+                    <audio controls=""><source src="resources/audio/cloning/p231_4/gradtts_fsl.wav"></audio>
                 </td>
                 <td>
-                    <audio controls="">
-                        <source src="resources/audio/cloning/p231_4/diffvc_fsl.wav">
-                    </audio>
+                    <audio controls=""><source src="resources/audio/cloning/p231_4/diffvc_fsl.wav"></audio>
                 </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><br></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h2 class="wrapper">3 Additional speakers</h2>
+    <p class="wrapper">Voice cloning results for some speakers for additional test.</p>
+    <div class="wrapper" style="text-align: center;">
+        <span class="choose">Choose a speaker:</span>
+        <div class="dropdown">
+            <div class="select">
+                <span>Select speaker</span>
+                <i class="fa fa-chevron-left"></i>
+            </div>
+            <input type="hidden" name="gender">
+            <ul class="dropdown-menu cloning_additional">
+                <li id="scarlett">scarlett</li>
+                <li id="amanda2">amanda</li>
+                <li id="rachel">rachel</li>
+                <li id="thomas">thomas</li>
+                <li id="arthur">arthur</li>
+            </ul>
+        </div>
+    </div>
+    <div class="wrapper_cloning_additional">
+        <table class="wrapper smaller_audio">
+            <tbody style="margin-right: auto; text-align: center;">
+            <tr>
+                <td></td>
+                <td><b>scarlett</b></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <audio controls="" src="resources/audio/cloning/scarlett/target.wav"><source src=""></audio>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><br></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td colspan="8" class="table_text"><b> Text: </b>When a man looks for something beyond his reach, his
+                    friends say he is looking for the pot of gold of the end of the rainbow.
+                </td>
+            </tr>
+            <tr>
+                <td><br></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><a href="https://github.com/KevinMIN95/StyleSpeech">StyleSpeech</a></td>
+                <td>FastSpeech</a></td>
+                <td>Tacotron-SMA</td>
+                <td>Grad-TTS</td>
+                <td>Ours</td>
+            </tr>
+            <tr>
+                <td style="font-size: medium; text-align: right;"><i style="font-weight: 700;">FSL</i>:</td>
+                <td><audio controls=""><source src="resources/audio/cloning/scarlett/stylespeech_fsl.wav"></audio></td>
+                <td><audio controls=""><source src="resources/audio/cloning/scarlett/stylespeech_fsl.wav"></audio></td>
+                <td><audio controls=""><source src="resources/audio/cloning/scarlett/stylespeech_fsl.wav"></audio></td>
+                <td><audio controls=""><source src="resources/audio/cloning/scarlett/stylespeech_fsl.wav"></audio></td>
+                <td><audio controls=""><source src="resources/audio/cloning/scarlett/stylespeech_fsl.wav"></audio></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><br></td>
+            </tr>
+            <tr>
+                <td><br></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td colspan="8" class="table_text"><b> Text: </b>Does Jane know about your new job? No, and don't you dare tell her! She will be furious!
+                </td>
+            </tr>
+            <tr>
+                <td><br></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><a href="https://github.com/KevinMIN95/StyleSpeech">StyleSpeech</a></td>
+                <td>FastSpeech</a></td>
+                <td>Tacotron-SMA</td>
+                <td>Grad-TTS</td>
+                <td>Ours</td>
+
+            </tr>
+            <tr>
+                <td style="font-size: medium; text-align: right;"><i style="font-weight: 700;">FSL</i>:</td>
+                <td><audio controls=""><source src="resources/audio/cloning/scarlett_2/stylespeech_fsl.wav"></audio></td>
+                <td><audio controls=""><source src="resources/audio/cloning/scarlett_2/fs_fsl.wav"></audio></td>
+                <td><audio controls=""><source src="resources/audio/cloning/scarlett_2/sma_fsl.wav"></audio></td>
+                <td><audio controls=""><source src="resources/audio/cloning/scarlett_2/gradtts_fsl.wav"></audio></td>
+                <td><audio controls=""><source src="resources/audio/cloning/scarlett_2/diffvc_fsl.wav"></audio></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><br></td>
+            </tr>
+            <tr>
+                <td><br></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class="table_text" colspan="8"><b> Text: </b>Throughout the centuries people have explained the
+                    rainbow in various ways.
+                </td>
+            </tr>
+            <tr>
+                <td><br></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><a href="https://github.com/KevinMIN95/StyleSpeech">StyleSpeech</a></td>
+                <td>FastSpeech</a></td>
+                <td>Tacitron-SMA</td>
+                <td>Grad-TTS</td>
+                <td>Ours</td>
+            </tr>
+            <tr>
+                <td style="font-size: medium; text-align: right;"><i style="font-weight: 700;">FSL</i>:</td>
+                <td><audio controls=""><source src="resources/audio/cloning/scarlett_4/stylespeech_fsl.wav"></audio></td>
+                <td><audio controls=""><source src="resources/audio/cloning/scarlett_4/stylespeech_fsl.wav"></audio></td>
+                <td><audio controls=""><source src="resources/audio/cloning/scarlett_4/stylespeech_fsl.wav"></audio></td>
+                <td><audio controls=""><source src="resources/audio/cloning/scarlett_4/stylespeech_fsl.wav"></audio></td>
+                <td><audio controls=""><source src="resources/audio/cloning/scarlett_4/stylespeech_fsl.wav"></audio></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><br></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h2 class="wrapper">4 Voice Cloning dependence on amount of data</h2>
+    <p class="wrapper">We studied the influence of the amount of adaptation data on the quality of the
+        speech synthesized by our system in a few-shot mode. The dataset was decreased from 60 seconds to 30, 15 and 5
+        which correspond to 6, 2 and 1 audio samples. </p>
+    <div class="wrapper" style="text-align: center;">
+        <span class="choose">Choose a speaker:</span>
+
+        <div class="dropdown">
+            <div class="select">
+                <span>Select speaker</span>
+                <i class="fa fa-chevron-left"></i>
+            </div>
+            <input type="hidden" name="gender">
+            <ul class="dropdown-menu cloning_dataset_len">
+                <li id="scarlett">scarlett</li>
+                <li id="p225">p225</li>
+                <li id="p229">p229</li>
+                <li id="p231">p231</li>
+                <li id="p233">p233</li>
+                <li id="p243">p243</li>
+                <li id="p253">p253</li>
+                <li id="p261">p261</li>
+            </ul>
+        </div>
+    </div>
+    <div class="wrapper_cloning_dataset_len">
+        <table class="wrapper smaller_audio">
+            <tbody style="margin-right: auto; text-align: center;">
+            <tr>
+                <td></td>
+                <td><b>scarlett</b></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <audio controls="" src="resources/audio/dataset_len_test/scarlett/target.wav"><source src=""></audio>
+                </td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td><br></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td colspan="8" class="table_text"><b> Text: </b>When a man looks for something beyond his reach, his
+                    friends say he is looking for the pot of gold of the end of the rainbow.
+                </td>
+            </tr>
+            <tr>
+                <td><br></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>5s</td>
+                <td>15s</td>
+                <td>30s</td>
+                <td>60s</td>
+            </tr>
+            <tr>
+                <td style="font-size: medium; text-align: right;"><i style="font-weight: 700;">FSL</i>:</td>
+                <td><audio controls=""><source src="resources/audio/dataset_len_test/scarlett/5s.wav"></audio></td>
+                <td><audio controls=""><source src="resources/audio/dataset_len_test/scarlett/15s.wav"></audio></td>
+                <td><audio controls=""><source src="resources/audio/dataset_len_test/scarlett/30s.wav"></audio></td>
+                <td><audio controls=""><source src="resources/audio/dataset_len_test/scarlett/60s.wav"></audio></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><br></td>
+            </tr>
+            <tr> 
+            <td><br></td> 
+            </tr> 
+            <tr>
+                <td></td>
+                <td class="table_text" colspan="8"><b> Text: </b>Throughout the centuries people have explained the
+                    rainbow in various ways.
+                </td>
+            </tr>
+            
+            <tr>
+                <td><br></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>5s</td>
+                <td>15s</td>
+                <td>30s</td>
+                <td>60s</td>
+            </tr>
+            <tr>
+                <td style="font-size: medium; text-align: right;"><i style="font-weight: 700;">FSL</i>:</td>
+                <td><audio controls=""><source src="resources/audio/dataset_len_test/scarlett_4/5s.wav"></audio></td>
+                <td><audio controls=""><source src="resources/audio/dataset_len_test/scarlett_4/15s.wav"></audio></td>
+                <td><audio controls=""><source src="resources/audio/dataset_len_test/scarlett_4/30s.wav"></audio></td>
+                <td><audio controls=""><source src="resources/audio/dataset_len_test/scarlett_4/60s.wav"></audio></td>
                 <td></td>
             </tr>
             <tr>
