@@ -51,8 +51,8 @@ $('.dropdown-menu.conversion li').click(function () {
 			</tr> \
 			<tr> \
 				<td></td>\
-				<td><a href="https://github.com/Wendison/VQMIVC">FS-PPG-VC</a></td> \
-                <td>BNE-PPG-VC</a></td> \
+				<td>FS-PPG-VC</td> \
+                <td><a href="https://github.com/liusongxiang/ppg-vc">BNE-PPG-VC</a></td> \
                 <td>Ours</td> \
 			</tr> \
 			<tr> \
@@ -158,12 +158,12 @@ $('.dropdown-menu.cloning li').click(function () {
                 <tr> \
                     <td></td> \
                     <td><audio controls="" src="resources/audio/cloning/' + speaker.pairs[0].folder + '/target.wav"><source src=""></audio></td>  \
-                </tr>'
+                </tr> \
+                <tr> \
+            		<td><br></td> \
+        		</tr>'
     speaker.pairs.forEach(function (pair){
     	cloning_table_html += ' \
-    	<tr> \
-            <td><br></td> \
-        </tr> \
     	<tr> \
     	    <td></td> \
 	    	<td colspan="8" class="table_text"> <b> Text: </b>' + pair.text + '</td> \
@@ -274,12 +274,12 @@ $('.dropdown-menu.cloning_additional li').click(function () {
                 <tr> \
                     <td></td> \
                     <td><audio controls="" src="resources/audio/cloning/' + speaker.pairs[0].folder + '/target.wav"><source src=""></audio></td>  \
-                </tr>'
+                </tr> \
+                <tr> \
+            		<td><br></td> \
+        		</tr> '
     speaker.pairs.forEach(function (pair){
     	cloning_table_html += ' \
-    	<tr> \
-            <td><br></td> \
-        </tr> \
     	<tr> \
     	    <td></td> \
 	    	<td colspan="8" class="table_text"> <b> Text: </b>' + pair.text + '</td> \
@@ -394,13 +394,13 @@ $('.dropdown-menu.cloning_dataset_len li').click(function () {
                 </tr> \
                 <tr> \
                     <td></td> \
-                    <td><audio controls="" src="resources/audio/dataset_len_test/' + speaker.pairs[0].folder + '/target.wav"><source src=""></audio></td>  \
+                    <td><audio controls="" src="resources/audio/dataset_len_test/" + speaker.pairs[0].folder + "/target.wav"><source src=""></audio></td> \
+                </tr> \
+                <tr> \
+                    <td><br></td> \
                 </tr>'
     speaker.pairs.forEach(function (pair){
     	cloning_table_html += ' \
-    	<tr> \
-            <td><br></td> \
-        </tr> \
     	<tr> \
     	    <td></td> \
 	    	<td colspan="8" class="table_text"> <b> Text: </b>' + pair.text + '</td> \
