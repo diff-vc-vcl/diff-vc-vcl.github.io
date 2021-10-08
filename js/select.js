@@ -394,7 +394,7 @@ $('.dropdown-menu.cloning_dataset_len li').click(function () {
                 </tr> \
                 <tr> \
                     <td></td> \
-                    <td><audio controls="" src="resources/audio/dataset_len_test/" + speaker.pairs[0].folder + "/target.wav"><source src=""></audio></td> \
+                    <td><audio controls=""><source src="resources/audio/dataset_len_test/' + speaker.pairs[0].folder + '/target.wav"></audio></td> \
                 </tr> \
                 <tr> \
                     <td><br></td> \
